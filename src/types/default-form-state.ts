@@ -1,5 +1,5 @@
-export type DefaultFormState = {
+export type DefaultFormState<TFields> = {
   success: boolean;
-  errors: { [key: string]: string[] } | null;
+  errors: Partial<Record<keyof TFields, string[]>> | null;
   message?: string | null;
 };
